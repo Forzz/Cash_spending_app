@@ -25,7 +25,7 @@ class MyHomePage extends StatelessWidget {
     Transaction(
       id: 't2',
       title: 'Cool Hat',
-      amount: 23.55,
+      amount: 25.55,
       date: DateTime.now(),
     ),
   ];
@@ -51,11 +51,21 @@ class MyHomePage extends StatelessWidget {
           Column(
             //Transforming list of objects to list of widgets
             children: transactions.map((tx) {
-              //Returnin widget Card with title text from transactions
+              //Returnin widget Card with amount, title and date text from transactions
               return Card(
                 child: Row(
                   children: <Widget>[
                     Container(
+                      margin: EdgeInsets.symmetric(
+                        vertical: 10,
+                        horizontal: 15,
+                      ),
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                        color: Colors.black,
+                        width: 2,
+                      )),
+                      padding: EdgeInsets.all(10),
                       child: Text(
                         tx.amount.toString(),
                       ),
