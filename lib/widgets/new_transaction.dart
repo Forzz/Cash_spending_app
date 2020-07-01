@@ -26,12 +26,12 @@ class NewTransaction extends StatelessWidget {
     return Card(
       elevation: 5,
       child: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
             TextField(
-              decoration: InputDecoration(labelText: 'Title'),
+              decoration: const InputDecoration(labelText: 'Title'),
               controller: titleController,
               onSubmitted: (_) => submitData,
               // onChanged: (value) {
@@ -40,7 +40,7 @@ class NewTransaction extends StatelessWidget {
             ),
             TextField(
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(labelText: 'Amount'),
+              decoration: const InputDecoration(labelText: 'Amount'),
               controller: amountController,
               onSubmitted: (_) => submitData,
               // onChanged: (value) {
@@ -48,9 +48,9 @@ class NewTransaction extends StatelessWidget {
               // },
             ),
             FlatButton(
-              child: Text('Add Transaction'),
               onPressed: submitData,
               textColor: Colors.red[800],
+              child: const Text('Add Transaction'),
             )
           ],
         ),

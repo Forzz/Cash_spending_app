@@ -24,7 +24,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter app'),
+        title: const Text('Flutter app'),
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -44,15 +44,20 @@ class MyHomePage extends StatelessWidget {
               width: double.infinity,
               child: Card(
                 color: Colors.blue,
-                child: Text('CHART'),
                 elevation: 5,
+                child: const Text('CHART'),
               ),
             ),
             UserTransactions(),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(child: Icon(Icons.add,),),
+      floatingActionButton: FloatingActionButton(
+        onPressed: null,
+        child: Icon(
+          Icons.add,
+        ),
+      ),
     );
   }
 }
