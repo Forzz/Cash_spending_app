@@ -10,7 +10,21 @@ class CashSpendingApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Budget expenses',
+      theme: ThemeData(
+        primaryColor: Colors.grey[800],
+        accentColor: Colors.grey[800],
+        fontFamily: 'Roboto',
+        appBarTheme: AppBarTheme(
+          textTheme: ThemeData.light().textTheme.copyWith(
+                headline6: TextStyle(
+                  fontFamily: 'Roboto',
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+        ),
+      ),
       home: MyHomePage(),
     );
   }
@@ -68,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter app'),
+        title: const Text('Budget expenses'),
         actions: <Widget>[
           IconButton(
             icon: Icon(
