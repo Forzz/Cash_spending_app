@@ -1,4 +1,4 @@
-# cash_spending
+# Cash_app
 
 A new Flutter project.
 
