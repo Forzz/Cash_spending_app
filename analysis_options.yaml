@@ -8,3 +8,5 @@ analyzer:
   errors:
     missing_required_param: error
     parameter_assignments: error
+  enable-experiment:
+    - control-flow-collections
