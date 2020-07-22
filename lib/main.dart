@@ -114,8 +114,22 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
     final isLandscape = mediaQuery.orientation == Orientation.landscape;
-    final ObstructingPreferredSizeWidget appBar = (Platform.isIOS
-        ? CupertinoNavigationBar(
+    final PreferredSizeWidget appBar =
+        AppBar(
+            title: const Text(
+              'Budget expenses',
+            ),
+            actions: <Widget>[
+              IconButton(
+                icon: Icon(
+                  Icons.add,
+                ),
+                onPressed: () => _startAddNewTransaction(context),
+              )
+            ],
+        );
+
+  final ObstructingPreferredSizeWidget appBarIOS = CupertinoNavigationBar(
             middle: const Text(
               'Budget expenses',
             ),
@@ -128,20 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
-          )
-        : AppBar(
-            title: const Text(
-              'Budget expenses',
-            ),
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(
-                  Icons.add,
-                ),
-                onPressed: () => _startAddNewTransaction(context),
-              )
-            ],
-          )) as ObstructingPreferredSizeWidget;
+          );
 
     final txListWidget = Container(
       height: (mediaQuery.size.height -
@@ -202,7 +203,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Platform.isIOS
         ? CupertinoPageScaffold(
-            navigationBar: appBar,
+            navigationBar: appBarIOS,
             child: pageBody,
           )
         : Scaffold(
