@@ -1,16 +1,28 @@
-# Cash_app
+# Cash spendings flutter app
 
-A new Flutter project.
+Flutter app for tracking your daily spendings (Without saving after full restart).
 
-## Getting Started
+You can add spendings by clicking on central bottom button or upper right button. Adding have 3 options: Title, Amount and Date. Without filling in one of the fields, it will not be added in list of spendings. Title can contain only English text. Amount have special keyboard for setting spending. The date picking uses default calendar and changes graphs only for last 7 days.
 
-This project is a starting point for a Flutter application.
+App works in 2 modes: portrait and landscape.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+|             Main screen         |          Adding screen         |           Filled List           |
+|---------------------------------|--------------------------------|---------------------------------|
+|![](images/github_mainscreen.png)|![](images/github_addscreen.png)|![](images/github_filledmain.png)|
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Operability
+
+|OS     |Operate|
+|-------|-------|
+|Android|✔️    |
+|iOS    |❓     |
+
+✔️ - Stable
+
+❓ - Not tested
+
+## Special thanks
+
+[Flutter & Dart - The Complete Guide [2020 Edition]](https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/) - The course I'm studying.
